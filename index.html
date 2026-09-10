@@ -1,0 +1,2525 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Knowledge Hub | Learn More. Know More. Become More.</title>
+  
+  <!-- SEO & Open Graph Meta Tags -->
+  <meta name="description" content="Knowledge Hub in Karachi, Pakistan is a modern learning space focused on knowledge, skills, continuous growth, and curiosity." />
+  <meta property="og:title" content="Knowledge Hub | Modern Educational Academy & Learning Space" />
+  <meta property="og:description" content="Learn More. Know More. Become More. A modern learning space focused on knowledge, skills, and continuous growth." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80" />
+
+  <!-- Inline SVG Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================
+       CSS VARIABLES & THEME STYLES
+       ========================================== */
+    :root {
+      --navy-dark: #070d19;
+      --navy-deep: #0e172a;
+      --navy-card: #162238;
+      --navy-card-hover: #1e2c48;
+      --royal-blue: #2563eb;
+      --royal-blue-hover: #1d4ed8;
+      --soft-blue: #60a5fa;
+      --light-blue-bg: #eff6ff;
+      --accent-gold: #f59e0b;
+      --accent-gold-hover: #d97706;
+      --text-light: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dark: #0f172a;
+      --border-color: rgba(255, 255, 255, 0.08);
+      --border-light: #e2e8f0;
+      
+      --font-heading: 'Space Grotesk', sans-serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+      
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-xl: 32px;
+      
+      --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+      --shadow-glow: 0 0 30px rgba(37, 99, 235, 0.25);
+      
+      --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Reset & Base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      background-color: var(--navy-dark);
+      color: var(--text-light);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    button, input, select, textarea {
+      font-family: inherit;
+      border: none;
+      outline: none;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+
+    .section-padding {
+      padding: 110px 0;
+    }
+
+    /* Typography Utilities */
+    .section-subtitle {
+      color: var(--soft-blue);
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      margin-bottom: 12px;
+      display: inline-block;
+    }
+
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--text-light);
+      margin-bottom: 16px;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 60px auto;
+    }
+
+    .section-desc {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 32px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.3px;
+      cursor: pointer;
+      transition: var(--transition);
+      gap: 10px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--royal-blue), #1d4ed8);
+      color: #ffffff;
+      box-shadow: 0 4px 20px rgba(37, 99, 235, 0.4);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(37, 99, 235, 0.6);
+      background: linear-gradient(135deg, #2563eb, #1e40af);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-light);
+      border: 1px solid var(--border-color);
+      backdrop-filter: blur(10px);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: var(--soft-blue);
+      color: var(--soft-blue);
+      transform: translateY(-2px);
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-hover));
+      color: var(--navy-dark);
+      box-shadow: 0 4px 20px rgba(245, 158, 11, 0.3);
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(245, 158, 11, 0.5);
+    }
+
+    /* Scroll Animations */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ==========================================
+       NAVBAR
+       ========================================== */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 24px 0;
+      transition: var(--transition);
+    }
+
+    .navbar.scrolled {
+      background: rgba(7, 13, 25, 0.92);
+      backdrop-filter: blur(16px);
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+      font-family: var(--font-heading);
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .logo-main {
+      font-size: 1.35rem;
+      color: var(--text-light);
+    }
+
+    .logo-sub {
+      font-size: 0.85rem;
+      color: var(--soft-blue);
+      letter-spacing: 3.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--text-light);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--royal-blue);
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      width: 100%;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 6px;
+      z-index: 1001;
+    }
+
+    .hamburger span {
+      width: 28px;
+      height: 2px;
+      background: var(--text-light);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+
+    .hamburger.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    /* Mobile Nav */
+    @media (max-width: 992px) {
+      .hamburger { display: flex; }
+      .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 380px;
+        height: 100vh;
+        background: var(--navy-deep);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 28px;
+        transition: var(--transition);
+        border-left: 1px solid var(--border-color);
+        box-shadow: -10px 0 30px rgba(0,0,0,0.7);
+      }
+      .nav-links.active { right: 0; }
+      .nav-cta { display: none; }
+    }
+
+    /* ==========================================
+       HERO SECTION
+       ========================================== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding-top: 140px;
+      padding-bottom: 80px;
+      background: radial-gradient(circle at 70% 30%, rgba(37, 99, 235, 0.12) 0%, transparent 60%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .hero-content h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(3rem, 5.5vw, 4.5rem);
+      line-height: 1.08;
+      font-weight: 800;
+      margin-bottom: 24px;
+      color: var(--text-light);
+    }
+
+    .hero-content h1 span {
+      background: linear-gradient(135deg, var(--soft-blue), var(--royal-blue));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      margin-bottom: 40px;
+      max-width: 540px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 50px;
+    }
+
+    /* Learn-Practice-Grow Animated Visual */
+    .hero-flow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 24px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-color);
+      border-radius: 50px;
+      backdrop-filter: blur(10px);
+    }
+
+    .flow-step {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: var(--text-light);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .flow-step span {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--royal-blue);
+      display: inline-block;
+      box-shadow: 0 0 10px var(--royal-blue);
+    }
+
+    .flow-arrow {
+      color: var(--soft-blue);
+      font-weight: 800;
+    }
+
+    .hero-image-wrapper {
+      position: relative;
+    }
+
+    .hero-img {
+      width: 100%;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-glow);
+    }
+
+    /* ==========================================
+       ABOUT SECTION
+       ========================================== */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-img {
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-color);
+    }
+
+    .about-highlights {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 32px;
+    }
+
+    .highlight-pill {
+      background: var(--navy-card);
+      border: 1px solid var(--border-color);
+      padding: 16px 20px;
+      border-radius: var(--radius-md);
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--text-light);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .highlight-pill span {
+      font-size: 1.2rem;
+    }
+
+    /* ==========================================
+       LEARNING AREAS (CARDS)
+       ========================================== */
+    .areas-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 30px;
+    }
+
+    .area-card {
+      background: var(--navy-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .area-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--royal-blue);
+      box-shadow: var(--shadow-md);
+    }
+
+    .area-img-wrap {
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .area-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .area-card:hover .area-img-wrap img {
+      transform: scale(1.08);
+    }
+
+    .area-body {
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .area-icon {
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+    }
+
+    .area-title {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+
+    .area-desc {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      margin-bottom: 24px;
+      flex-grow: 1;
+    }
+
+    .area-link {
+      color: var(--soft-blue);
+      font-weight: 700;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .area-card:hover .area-link {
+      color: var(--text-light);
+    }
+
+    /* ==========================================
+       INTERACTIVE LEARNING FOCUS SELECTOR
+       ========================================== */
+    .focus-wrapper {
+      background: var(--navy-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-xl);
+      padding: 40px;
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .focus-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .focus-btn {
+      padding: 20px 24px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      text-align: left;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .focus-btn:hover,
+    .focus-btn.active {
+      background: var(--royal-blue);
+      border-color: var(--royal-blue);
+    }
+
+    .focus-btn h4 {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      color: var(--text-light);
+      margin-bottom: 4px;
+    }
+
+    .focus-btn p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .focus-btn.active p {
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .focus-display {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      min-height: 360px;
+    }
+
+    .focus-img {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      transition: opacity 0.4s ease;
+    }
+
+    .focus-overlay-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 30px;
+      background: linear-gradient(to top, rgba(7, 13, 25, 0.95), transparent);
+    }
+
+    .focus-overlay-content h3 {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      color: var(--text-light);
+      margin-bottom: 8px;
+    }
+
+    .focus-overlay-content p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* ==========================================
+       KNOWLEDGE CATEGORIES & FILTERING
+       ========================================== */
+    .filter-bar {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .filter-btn {
+      padding: 10px 24px;
+      border-radius: 30px;
+      background: var(--navy-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--royal-blue);
+      color: var(--text-light);
+      border-color: var(--royal-blue);
+    }
+
+    .knowledge-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+    }
+
+    .knowledge-card {
+      background: var(--navy-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 28px;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .knowledge-card:hover {
+      border-color: var(--soft-blue);
+      transform: translateY(-4px);
+    }
+
+    .knowledge-tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--soft-blue);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 12px;
+    }
+
+    .knowledge-card h4 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+
+    .knowledge-card p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    /* ==========================================
+       LEARNING EXPERIENCE (4-STEP JOURNEY)
+       ========================================== */
+    .journey-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      position: relative;
+    }
+
+    .journey-card {
+      background: var(--navy-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px 24px;
+      position: relative;
+      transition: var(--transition);
+    }
+
+    .journey-card:hover {
+      border-color: var(--royal-blue);
+      transform: translateY(-6px);
+    }
+
+    .journey-num {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--soft-blue);
+      margin-bottom: 16px;
+    }
+
+    .journey-card h4 {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      color: var(--text-light);
+      margin-bottom: 8px;
+    }
+
+    .journey-card p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 992px) {
+      .journey-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 576px) {
+      .journey-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ==========================================
+       KNOWLEDGE LAB (QUIZ SECTION)
+       ========================================== */
+    .quiz-card {
+      background: var(--navy-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-xl);
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 44px;
+    }
+
+    .quiz-progress-bar {
+      width: 100%;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      margin-bottom: 24px;
+      overflow: hidden;
+    }
+
+    .quiz-progress-fill {
+      height: 100%;
+      background: var(--royal-blue);
+      width: 20%;
+      transition: width 0.4s ease;
+    }
+
+    .quiz-meta {
+      display: flex;
+      justify-content: space-between;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .quiz-question-text {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      color: var(--text-light);
+      margin-bottom: 28px;
+    }
+
+    .quiz-options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+
+    .quiz-opt {
+      padding: 16px 20px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      color: var(--text-light);
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      text-align: left;
+      transition: var(--transition);
+    }
+
+    .quiz-opt:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: var(--soft-blue);
+    }
+
+    .quiz-opt.selected {
+      background: var(--royal-blue);
+      border-color: var(--royal-blue);
+      color: #fff;
+    }
+
+    .quiz-opt.correct {
+      background: #166534 !important;
+      border-color: #22c55e !important;
+      color: #fff !important;
+    }
+
+    .quiz-opt.wrong {
+      background: #991b1b !important;
+      border-color: #ef4444 !important;
+      color: #fff !important;
+    }
+
+    .quiz-footer {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .quiz-results {
+      text-align: center;
+      display: none;
+    }
+
+    .quiz-results h3 {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      color: var(--text-light);
+      margin-bottom: 12px;
+    }
+
+    .quiz-score-num {
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: var(--accent-gold);
+      margin: 16px 0;
+    }
+
+    /* ==========================================
+       STUDY TIPS SECTION
+       ========================================== */
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 28px;
+    }
+
+    .tip-card {
+      background: var(--navy-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tip-img {
+      height: 180px;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .tip-body {
+      padding: 24px;
+    }
+
+    .tip-body h4 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      color: var(--text-light);
+      margin-bottom: 8px;
+    }
+
+    .tip-body p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* ==========================================
+       RESOURCE SECTION
+       ========================================== */
+    .resources-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .resource-card {
+      background: var(--navy-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 28px;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      transition: var(--transition);
+    }
+
+    .resource-card:hover {
+      border-color: var(--soft-blue);
+      transform: translateY(-4px);
+    }
+
+    .resource-icon {
+      font-size: 2rem;
+      background: rgba(37, 99, 235, 0.1);
+      padding: 12px;
+      border-radius: 12px;
+    }
+
+    .resource-info h4 {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      color: var(--text-light);
+      margin-bottom: 6px;
+    }
+
+    .resource-info p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+    }
+
+    /* ==========================================
+       GALLERY & LIGHTBOX
+       ========================================== */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-item {
+      height: 240px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+      border: 1px solid var(--border-color);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.08);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(7, 13, 25, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      color: var(--text-light);
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    /* Lightbox Modal */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.92);
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(12px);
+    }
+
+    .lightbox.active { display: flex; }
+
+    .lightbox-img {
+      max-width: 85%;
+      max-height: 80vh;
+      border-radius: var(--radius-md);
+      object-fit: contain;
+    }
+
+    .lightbox-btn {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      border: 1px solid var(--border-color);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .lightbox-btn:hover {
+      background: var(--royal-blue);
+      border-color: var(--royal-blue);
+    }
+
+    .lightbox-close { top: 30px; right: 30px; }
+    .lightbox-prev { left: 30px; }
+    .lightbox-next { right: 30px; }
+
+    /* ==========================================
+       EDITORIAL: WHY KNOWLEDGE MATTERS
+       ========================================== */
+    .editorial-box {
+      background: linear-gradient(135deg, var(--navy-card), var(--navy-deep));
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-xl);
+      padding: 60px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .editorial-box h2 {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      color: var(--text-light);
+      margin-bottom: 20px;
+    }
+
+    .editorial-box p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      margin-bottom: 24px;
+      line-height: 1.8;
+    }
+
+    .editorial-img {
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-color);
+    }
+
+    /* ==========================================
+       FAQ ACCORDION
+       ========================================== */
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .faq-item {
+      background: var(--navy-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+
+    .faq-question {
+      padding: 22px 28px;
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--text-light);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-toggle {
+      font-size: 1.4rem;
+      color: var(--soft-blue);
+      transition: transform 0.3s ease;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+      padding: 0 28px;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 200px;
+      padding-bottom: 22px;
+    }
+
+    .faq-item.active .faq-toggle {
+      transform: rotate(45deg);
+    }
+
+    /* ==========================================
+       CONTACT CTA & CONTACT SECTION
+       ========================================== */
+    .contact-cta-box {
+      background: linear-gradient(135deg, var(--royal-blue), #1e40af);
+      border-radius: var(--radius-xl);
+      padding: 60px 40px;
+      text-align: center;
+      margin-bottom: 100px;
+      box-shadow: var(--shadow-glow);
+    }
+
+    .contact-cta-box h2 {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    .contact-cta-box p {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 1.15rem;
+      max-width: 600px;
+      margin: 0 auto 36px auto;
+    }
+
+    .contact-cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 50px;
+    }
+
+    .contact-info-card {
+      background: var(--navy-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-xl);
+      padding: 44px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .info-group {
+      margin-bottom: 30px;
+    }
+
+    .info-group label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--soft-blue);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .info-group p, .info-group a {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-light);
+    }
+
+    .info-group a:hover {
+      color: var(--soft-blue);
+    }
+
+    .contact-form-card {
+      background: var(--navy-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-xl);
+      padding: 44px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 14px 18px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      color: var(--text-light);
+      font-size: 0.95rem;
+      transition: var(--transition);
+    }
+
+    .form-control:focus {
+      border-color: var(--royal-blue);
+      background: rgba(37, 99, 235, 0.05);
+    }
+
+    textarea.form-control {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .form-alert {
+      padding: 14px;
+      border-radius: var(--radius-md);
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+      display: none;
+    }
+
+    .form-alert.success {
+      background: rgba(34, 197, 94, 0.15);
+      border: 1px solid #22c55e;
+      color: #4ade80;
+      display: block;
+    }
+
+    /* ==========================================
+       FOOTER
+       ========================================== */
+    .footer {
+      background: var(--navy-deep);
+      border-top: 1px solid var(--border-color);
+      padding-top: 80px;
+      padding-bottom: 40px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+
+    .footer-brand p {
+      color: var(--text-muted);
+      margin-top: 16px;
+      max-width: 300px;
+      font-size: 0.95rem;
+    }
+
+    .footer-col h4 {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      color: var(--text-light);
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--text-light);
+    }
+
+    .footer-cta-card {
+      background: var(--navy-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      margin-bottom: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-cta-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      color: var(--text-light);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border-color);
+      padding-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-legal {
+      display: flex;
+      gap: 20px;
+    }
+
+    /* Back To Top Button */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 48px;
+      height: 48px;
+      background: var(--royal-blue);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+      z-index: 999;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    }
+
+    .back-to-top.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* ==========================================
+       RESPONSIVE BREAKPOINTS
+       ========================================== */
+    @media (max-width: 1200px) {
+      .hero-grid { grid-template-columns: 1fr; text-align: center; }
+      .hero-content p { margin-left: auto; margin-right: auto; }
+      .hero-actions { justify-content: center; }
+      .editorial-box { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 992px) {
+      .about-grid { grid-template-columns: 1fr; }
+      .focus-wrapper { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 678px) {
+      .section-padding { padding: 70px 0; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .quiz-card { padding: 24px; }
+      .editorial-box { padding: 30px; }
+      .contact-info-card, .contact-form-card { padding: 28px; }
+      .hero-actions { flex-direction: column; width: 100%; }
+      .hero-actions .btn { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="logo">
+        <span class="logo-main">KNOWLEDGE</span>
+        <span class="logo-sub">HUB</span>
+      </a>
+      
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#learning">Learning</a></li>
+        <li><a href="#subjects">Subjects</a></li>
+        <li><a href="#resources">Resources</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <a href="#contact" class="btn btn-primary nav-cta">Start Learning</a>
+
+      <div class="hamburger" id="hamburger" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="hero-content reveal">
+        <span class="section-subtitle">A Modern Learning Space</span>
+        <h1>Learn More.<br>Know More.<br><span>Become More.</span></h1>
+        <p>A modern learning space focused on knowledge, skills, and continuous growth.</p>
+        
+        <div class="hero-actions">
+          <a href="#learning" class="btn btn-primary">Explore Learning</a>
+          <a href="#contact" class="btn btn-secondary">Contact Us</a>
+        </div>
+
+        <!-- Animated Educational Visual Flow -->
+        <div class="hero-flow">
+          <div class="flow-step"><span></span> LEARN</div>
+          <div class="flow-arrow">&rarr;</div>
+          <div class="flow-step"><span></span> PRACTICE</div>
+          <div class="flow-arrow">&rarr;</div>
+          <div class="flow-step"><span></span> GROW</div>
+        </div>
+      </div>
+
+      <div class="hero-image-wrapper reveal">
+        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1000&q=80" alt="Students learning in modern environment" class="hero-img" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="section-padding" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-col reveal">
+          <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=800&q=80" alt="Education books and learning desk" class="about-img" />
+        </div>
+        <div class="about-content-col reveal">
+          <span class="section-subtitle">Welcome to Knowledge Hub</span>
+          <h2 class="section-title">Dedicated to Education & Continuous Skill Building</h2>
+          <p class="section-desc" style="margin-bottom: 20px;">
+            Knowledge Hub is dedicated to empowering individuals through structured learning, critical thinking, and practical skill development.
+          </p>
+          <p class="section-desc">
+            We provide a environment where curiosity is encouraged, concepts are clarified, and continuous personal and academic growth is fostered.
+          </p>
+
+          <div class="about-highlights">
+            <div class="highlight-pill"><span>📚</span> Learning</div>
+            <div class="highlight-pill"><span>💡</span> Knowledge</div>
+            <div class="highlight-pill"><span>⚙️</span> Skills</div>
+            <div class="highlight-pill"><span>📝</span> Practice</div>
+            <div class="highlight-pill"><span>🌱</span> Growth</div>
+            <div class="highlight-pill"><span>🔍</span> Curiosity</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEARNING AREAS -->
+  <section class="section-padding" id="learning">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">Explore Your Learning Path</span>
+        <h2 class="section-title">Core Learning Areas</h2>
+        <p class="section-desc">Discover diverse educational domains tailored for growth, intellectual development, and practical knowledge.</p>
+      </div>
+
+      <div class="areas-grid">
+        <!-- Area 1 -->
+        <div class="area-card reveal">
+          <div class="area-img-wrap">
+            <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=600&q=80" alt="English & Communication" />
+          </div>
+          <div class="area-body">
+            <div class="area-icon">💬</div>
+            <h3 class="area-title">English & Communication</h3>
+            <p class="area-desc">Improve communication, vocabulary, and practical language skills for clearer expression.</p>
+            <a href="#contact" class="area-link">Explore Area &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Area 2 -->
+        <div class="area-card reveal">
+          <div class="area-img-wrap">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80" alt="Computer & Technology" />
+          </div>
+          <div class="area-body">
+            <div class="area-icon">💻</div>
+            <h3 class="area-title">Computer & Technology</h3>
+            <p class="area-desc">Explore digital skills, computing fundamentals, and essential technology concepts.</p>
+            <a href="#contact" class="area-link">Explore Area &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Area 3 -->
+        <div class="area-card reveal">
+          <div class="area-img-wrap">
+            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80" alt="Academic Learning" />
+          </div>
+          <div class="area-body">
+            <div class="area-icon">📖</div>
+            <h3 class="area-title">Academic Learning</h3>
+            <p class="area-desc">Support learning across different academic subjects to build strong foundational knowledge.</p>
+            <a href="#contact" class="area-link">Explore Area &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Area 4 -->
+        <div class="area-card reveal">
+          <div class="area-img-wrap">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80" alt="Professional Skills" />
+          </div>
+          <div class="area-body">
+            <div class="area-icon">💼</div>
+            <h3 class="area-title">Professional Skills</h3>
+            <p class="area-desc">Develop useful skills for education, career development, and professional growth.</p>
+            <a href="#contact" class="area-link">Explore Area &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Area 5 -->
+        <div class="area-card reveal">
+          <div class="area-img-wrap">
+            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=600&q=80" alt="Personal Development" />
+          </div>
+          <div class="area-body">
+            <div class="area-icon">🧠</div>
+            <h3 class="area-title">Personal Development</h3>
+            <p class="area-desc">Build productive learning habits, focus strategies, and self-confidence.</p>
+            <a href="#contact" class="area-link">Explore Area &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Area 6 -->
+        <div class="area-card reveal">
+          <div class="area-img-wrap">
+            <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=600&q=80" alt="General Knowledge" />
+          </div>
+          <div class="area-body">
+            <div class="area-icon">🌐</div>
+            <h3 class="area-title">General Knowledge</h3>
+            <p class="area-desc">Explore useful concepts, global information, and diverse educational ideas.</p>
+            <a href="#contact" class="area-link">Explore Area &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE LEARNING FOCUS SELECTOR -->
+  <section class="section-padding" style="background: rgba(255,255,255,0.01);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">Interactive Feature</span>
+        <h2 class="section-title">Choose Your Learning Focus</h2>
+        <p class="section-desc">Select a focus area below to see how Knowledge Hub supports your personal goals.</p>
+      </div>
+
+      <div class="focus-wrapper reveal">
+        <div class="focus-buttons">
+          <button class="focus-btn active" data-img="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80" data-title="Academic Focus" data-desc="Focus on core academic concepts, structured study habits, and subject comprehension.">
+            <h4>ACADEMIC</h4>
+            <p>Focus on subjects, concepts, and study.</p>
+          </button>
+
+          <button class="focus-btn" data-img="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80" data-title="Language Focus" data-desc="Focus on active communication, vocabulary building, and language confidence.">
+            <h4>LANGUAGE</h4>
+            <p>Focus on communication & language development.</p>
+          </button>
+
+          <button class="focus-btn" data-img="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80" data-title="Technology Focus" data-desc="Explore computing, digital tools, and technical problem solving.">
+            <h4>TECHNOLOGY</h4>
+            <p>Explore digital and technology skills.</p>
+          </button>
+
+          <button class="focus-btn" data-img="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" data-title="Professional Focus" data-desc="Develop practical skills suited for work environments and career paths.">
+            <h4>PROFESSIONAL</h4>
+            <p>Develop practical career-oriented skills.</p>
+          </button>
+        </div>
+
+        <div class="focus-display">
+          <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80" id="focusImg" class="focus-img" alt="Focus Visual" />
+          <div class="focus-overlay-content">
+            <h3 id="focusTitle">Academic Focus</h3>
+            <p id="focusDesc">Focus on core academic concepts, structured study habits, and subject comprehension.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KNOWLEDGE CATEGORIES & FILTERING -->
+  <section class="section-padding" id="subjects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">Discover Knowledge</span>
+        <h2 class="section-title">Explore Subjects & Topics</h2>
+        <p class="section-desc">Filter through knowledge categories to find topics relevant to your curiosity.</p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="filter-bar reveal">
+        <button class="filter-btn active" data-filter="all">All Topics</button>
+        <button class="filter-btn" data-filter="education">Education</button>
+        <button class="filter-btn" data-filter="technology">Technology</button>
+        <button class="filter-btn" data-filter="science">Science</button>
+        <button class="filter-btn" data-filter="business">Business</button>
+        <button class="filter-btn" data-filter="communication">Communication</button>
+        <button class="filter-btn" data-filter="growth">Personal Growth</button>
+      </div>
+
+      <!-- Grid Cards -->
+      <div class="knowledge-grid" id="knowledgeGrid">
+        <div class="knowledge-card reveal" data-category="education">
+          <span class="knowledge-tag">Education</span>
+          <h4>Modern Learning Techniques</h4>
+          <p>Understanding how active recall and spaced repetition accelerate knowledge retention.</p>
+          <a href="#contact" class="area-link">Learn More &rarr;</a>
+        </div>
+
+        <div class="knowledge-card reveal" data-category="technology">
+          <span class="knowledge-tag">Technology</span>
+          <h4>Digital Literacy Essentials</h4>
+          <p>Core concepts of computing, safe web navigation, and digital productivity tools.</p>
+          <a href="#contact" class="area-link">Learn More &rarr;</a>
+        </div>
+
+        <div class="knowledge-card reveal" data-category="science">
+          <span class="knowledge-tag">Science</span>
+          <h4>Scientific Method & Logic</h4>
+          <p>Approaching problems systematically through observation, hypothesis, and testing.</p>
+          <a href="#contact" class="area-link">Learn More &rarr;</a>
+        </div>
+
+        <div class="knowledge-card reveal" data-category="business">
+          <span class="knowledge-tag">Business</span>
+          <h4>Fundamentals of Economics</h4>
+          <p>Basics of supply, demand, financial literacy, and organizational structures.</p>
+          <a href="#contact" class="area-link">Learn More &rarr;</a>
+        </div>
+
+        <div class="knowledge-card reveal" data-category="communication">
+          <span class="knowledge-tag">Communication</span>
+          <h4>Effective Public Speaking</h4>
+          <p>Structuring thoughts clearly and delivering ideas with confidence and poise.</p>
+          <a href="#contact" class="area-link">Learn More &rarr;</a>
+        </div>
+
+        <div class="knowledge-card reveal" data-category="growth">
+          <span class="knowledge-tag">Personal Growth</span>
+          <h4>Time Management Habits</h4>
+          <p>Structuring study sessions and daily schedules for peak focus and efficiency.</p>
+          <a href="#contact" class="area-link">Learn More &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEARNING EXPERIENCE (4-STEP JOURNEY) -->
+  <section class="section-padding" style="background: rgba(255,255,255,0.01);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">Structured Growth</span>
+        <h2 class="section-title">Learning Is A Journey</h2>
+      </div>
+
+      <div class="journey-grid">
+        <div class="journey-card reveal">
+          <div class="journey-num">01</div>
+          <h4>DISCOVER</h4>
+          <p>Ask questions, explore new ideas, and identify what piques your curiosity.</p>
+        </div>
+
+        <div class="journey-card reveal">
+          <div class="journey-num">02</div>
+          <h4>LEARN</h4>
+          <p>Build foundational knowledge through structured learning and guidance.</p>
+        </div>
+
+        <div class="journey-card reveal">
+          <div class="journey-num">03</div>
+          <h4>PRACTICE</h4>
+          <p>Apply what you learn through exercises, review, and practical application.</p>
+        </div>
+
+        <div class="journey-card reveal">
+          <div class="journey-num">04</div>
+          <h4>GROW</h4>
+          <p>Continue improving your skills, broadening your understanding, and evolving.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KNOWLEDGE LAB (QUIZ SECTION) -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">Knowledge Lab</span>
+        <h2 class="section-title">Test Your Knowledge</h2>
+        <p class="section-desc">Try this simple 5-question general knowledge quiz to test your learning agility.</p>
+      </div>
+
+      <div class="quiz-card reveal" id="quizContainer">
+        <div id="quizActive">
+          <div class="quiz-meta">
+            <span>QUESTION <span id="quizCurrentNum">1</span> OF 5</span>
+            <span id="quizCategory">General Knowledge</span>
+          </div>
+
+          <div class="quiz-progress-bar">
+            <div class="quiz-progress-fill" id="quizProgressFill"></div>
+          </div>
+
+          <div class="quiz-question-text" id="quizQuestionText">Loading Question...</div>
+
+          <div class="quiz-options" id="quizOptions"></div>
+
+          <div class="quiz-footer">
+            <button class="btn btn-primary" id="quizNextBtn" disabled>Next Question &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Quiz Results -->
+        <div class="quiz-results" id="quizResults">
+          <h3>Quiz Completed!</h3>
+          <p class="section-desc">Thank you for testing your knowledge.</p>
+          <div class="quiz-score-num"><span id="finalScore">0</span> / 5</div>
+          <button class="btn btn-primary" id="quizRestartBtn">Restart Quiz</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STUDY TIPS SECTION -->
+  <section class="section-padding" style="background: rgba(255,255,255,0.01);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">Effective Strategies</span>
+        <h2 class="section-title">Smart Ways To Learn</h2>
+      </div>
+
+      <div class="tips-grid">
+        <div class="tip-card reveal">
+          <img src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?auto=format&fit=crop&w=500&q=80" alt="Set Clear Goals" class="tip-img" />
+          <div class="tip-body">
+            <h4>Set Clear Goals</h4>
+            <p>Define specific learning targets for each study session to stay focused and motivated.</p>
+          </div>
+        </div>
+
+        <div class="tip-card reveal">
+          <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=500&q=80" alt="Practice Regularly" class="tip-img" />
+          <div class="tip-body">
+            <h4>Practice Regularly</h4>
+            <p>Consistent, short practice sessions build stronger long-term retention than cramming.</p>
+          </div>
+        </div>
+
+        <div class="tip-card reveal">
+          <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=500&q=80" alt="Take Useful Notes" class="tip-img" />
+          <div class="tip-body">
+            <h4>Take Useful Notes</h4>
+            <p>Summarize concepts in your own words rather than copying text verbatim.</p>
+          </div>
+        </div>
+
+        <div class="tip-card reveal">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=500&q=80" alt="Ask Questions" class="tip-img" />
+          <div class="tip-body">
+            <h4>Ask Questions</h4>
+            <p>Curiosity drives deeper understanding. Never hesitate to question underlying principles.</p>
+          </div>
+        </div>
+
+        <div class="tip-card reveal">
+          <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=500&q=80" alt="Review What You Learn" class="tip-img" />
+          <div class="tip-body">
+            <h4>Review What You Learn</h4>
+            <p>Periodically re-visit previous topics to reinforce memory and connect new ideas.</p>
+          </div>
+        </div>
+
+        <div class="tip-card reveal">
+          <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=500&q=80" alt="Apply Your Knowledge" class="tip-img" />
+          <div class="tip-body">
+            <h4>Apply Your Knowledge</h4>
+            <p>Put concepts into practice through real projects, writing, or explaining to others.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESOURCES SECTION -->
+  <section class="section-padding" id="resources">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">Support Materials</span>
+        <h2 class="section-title">Learning Resources</h2>
+        <p class="section-desc">Key categories of study support aimed at guiding your learning process.</p>
+      </div>
+
+      <div class="resources-grid">
+        <div class="resource-card reveal">
+          <div class="resource-icon">📑</div>
+          <div class="resource-info">
+            <h4>Study Guides</h4>
+            <p>Structured outlines to help organize your learning focus.</p>
+          </div>
+        </div>
+
+        <div class="resource-card reveal">
+          <div class="resource-icon">📝</div>
+          <div class="resource-info">
+            <h4>Learning Notes</h4>
+            <p>Concise summaries of key subject concepts and formulas.</p>
+          </div>
+        </div>
+
+        <div class="resource-card reveal">
+          <div class="resource-icon">⚙️</div>
+          <div class="resource-info">
+            <h4>Practice Materials</h4>
+            <p>Exercises designed to reinforce understanding through action.</p>
+          </div>
+        </div>
+
+        <div class="resource-card reveal">
+          <div class="resource-icon">📰</div>
+          <div class="resource-info">
+            <h4>Knowledge Articles</h4>
+            <p>Informative pieces on educational trends and skill building.</p>
+          </div>
+        </div>
+
+        <div class="resource-card reveal">
+          <div class="resource-icon">🛠️</div>
+          <div class="resource-info">
+            <h4>Skill Resources</h4>
+            <p>Reference tools for digital literacy and communication skills.</p>
+          </div>
+        </div>
+
+        <div class="resource-card reveal">
+          <div class="resource-icon">💡</div>
+          <div class="resource-info">
+            <h4>Learning Tips</h4>
+            <p>Actionable advice to optimize focus, memory, and study habits.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY SECTION -->
+  <section class="section-padding" style="background: rgba(255,255,255,0.01);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">Visual Experience</span>
+        <h2 class="section-title">Inside The Learning World</h2>
+      </div>
+
+      <!-- Gallery Filters -->
+      <div class="filter-bar reveal">
+        <button class="filter-btn active" data-gfilter="all">All</button>
+        <button class="filter-btn" data-gfilter="classroom">Classroom</button>
+        <button class="filter-btn" data-gfilter="study">Study</button>
+        <button class="filter-btn" data-gfilter="books">Books</button>
+        <button class="filter-btn" data-gfilter="technology">Technology</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid" id="galleryGrid">
+        <div class="gallery-item reveal" data-gcategory="classroom">
+          <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=600&q=80" alt="Modern Classroom" />
+          <div class="gallery-overlay">VIEW IMAGE</div>
+        </div>
+
+        <div class="gallery-item reveal" data-gcategory="study">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80" alt="Students Studying Together" />
+          <div class="gallery-overlay">VIEW IMAGE</div>
+        </div>
+
+        <div class="gallery-item reveal" data-gcategory="books">
+          <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=600&q=80" alt="Library Books" />
+          <div class="gallery-overlay">VIEW IMAGE</div>
+        </div>
+
+        <div class="gallery-item reveal" data-gcategory="technology">
+          <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80" alt="Laptop and Coding" />
+          <div class="gallery-overlay">VIEW IMAGE</div>
+        </div>
+
+        <div class="gallery-item reveal" data-gcategory="classroom">
+          <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=600&q=80" alt="Teacher Explaining Concept" />
+          <div class="gallery-overlay">VIEW IMAGE</div>
+        </div>
+
+        <div class="gallery-item reveal" data-gcategory="study">
+          <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80" alt="Individual Study" />
+          <div class="gallery-overlay">VIEW IMAGE</div>
+        </div>
+
+        <div class="gallery-item reveal" data-gcategory="books">
+          <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=600&q=80" alt="Bookshelf rows" />
+          <div class="gallery-overlay">VIEW IMAGE</div>
+        </div>
+
+        <div class="gallery-item reveal" data-gcategory="technology">
+          <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80" alt="Digital Learning Group" />
+          <div class="gallery-overlay">VIEW IMAGE</div>
+        </div>
+
+        <div class="gallery-item reveal" data-gcategory="study">
+          <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=600&q=80" alt="Writing in Journal" />
+          <div class="gallery-overlay">VIEW IMAGE</div>
+        </div>
+
+        <div class="gallery-item reveal" data-gcategory="classroom">
+          <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80" alt="Active Educational Discussion" />
+          <div class="gallery-overlay">VIEW IMAGE</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-btn lightbox-close" id="lbClose">&times;</button>
+    <button class="lightbox-btn lightbox-prev" id="lbPrev">&#10094;</button>
+    <img src="" alt="Enlarged View" class="lightbox-img" id="lbImg" />
+    <button class="lightbox-btn lightbox-next" id="lbNext">&#10095;</button>
+  </div>
+
+  <!-- WHY KNOWLEDGE MATTERS (EDITORIAL) -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="editorial-box reveal">
+        <div>
+          <span class="section-subtitle">Perspective</span>
+          <h2>Knowledge Creates Possibilities</h2>
+          <p>
+            Learning expands perspective, strengthens critical thinking, and prepares individuals to navigate a constantly changing world.
+          </p>
+          <p>
+            By investing in skills and knowledge, people can approach opportunities with greater confidence, solve complex problems, and make informed decisions.
+          </p>
+          <a href="#contact" class="btn btn-primary">Connect With Us</a>
+        </div>
+        <div>
+          <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=600&q=80" alt="Knowledge and Learning" class="editorial-img" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="section-padding" id="faq" style="background: rgba(255,255,255,0.01);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">Common Questions</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="faq-container reveal">
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What can I learn at Knowledge Hub?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            Knowledge Hub offers learning support across multiple domains including English & Communication, Computer & Technology, Academic subjects, Professional skills, and General Knowledge.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What learning areas are available?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            Our core focus areas include English & Communication, Computer & Technology, Academic Learning, Professional Skills, Personal Development, and General Knowledge.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Is Knowledge Hub suitable for beginners?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            Yes, Knowledge Hub provides foundational guidance suitable for learners starting out as well as individuals looking to enhance existing skills.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Can I explore different subjects?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            Yes, learners are encouraged to explore multiple subject areas depending on their personal interests and goals.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>How can I contact Knowledge Hub?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            You can contact us via phone at 03092749383, WhatsApp at +92 309 2749383, email at info@knowledgehub.com, or by using the inquiry form below.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Where is Knowledge Hub located?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            Knowledge Hub is located in Karachi, Pakistan.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT CTA & SECTION -->
+  <section class="section-padding" id="contact">
+    <div class="container">
+      <!-- Contact CTA Box -->
+      <div class="contact-cta-box reveal">
+        <h2>Ready To Learn Something New?</h2>
+        <p>Connect with Knowledge Hub and explore your next learning opportunity.</p>
+        <div class="contact-cta-buttons">
+          <a href="tel:+923092749383" class="btn btn-gold">Call Now</a>
+          <a href="https://wa.me/923092749383" target="_blank" class="btn btn-secondary">WhatsApp Us</a>
+          <a href="mailto:info@knowledgehub.com" class="btn btn-secondary">Email Us</a>
+        </div>
+      </div>
+
+      <!-- Main Contact Grid -->
+      <div class="contact-grid">
+        <div class="contact-info-card reveal">
+          <div>
+            <span class="section-subtitle">Get In Touch</span>
+            <h3 style="font-family: var(--font-heading); font-size: 2rem; color: var(--text-light); margin-bottom: 24px;">KNOWLEDGE HUB</h3>
+
+            <div class="info-group">
+              <label>Location</label>
+              <p>Karachi, Pakistan</p>
+            </div>
+
+            <div class="info-group">
+              <label>Phone</label>
+              <p><a href="tel:+923092749383">03092749383</a></p>
+            </div>
+
+            <div class="info-group">
+              <label>WhatsApp</label>
+              <p><a href="https://wa.me/923092749383" target="_blank">+92 309 2749383</a></p>
+            </div>
+
+            <div class="info-group">
+              <label>Email</label>
+              <p><a href="mailto:info@knowledgehub.com">info@knowledgehub.com</a></p>
+            </div>
+          </div>
+
+          <div style="padding-top: 20px; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.85rem;">
+            A space for curious minds, active learners, and skill growth.
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-card reveal">
+          <h3 style="font-family: var(--font-heading); font-size: 1.8rem; color: var(--text-light); margin-bottom: 20px;">Send An Inquiry</h3>
+          
+          <div class="form-alert" id="formAlert"></div>
+
+          <form id="inquiryForm">
+            <div class="form-group">
+              <label for="fullName">Full Name</label>
+              <input type="text" id="fullName" class="form-control" placeholder="Enter your full name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" class="form-control" placeholder="name@example.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" class="form-control" placeholder="03XXXXXXXXX" required />
+            </div>
+
+            <div class="form-group">
+              <label for="interest">Learning Interest</label>
+              <select id="interest" class="form-control" required>
+                <option value="English & Communication">English & Communication</option>
+                <option value="Computer & Technology">Computer & Technology</option>
+                <option value="Academic Learning">Academic Learning</option>
+                <option value="Professional Skills">Professional Skills</option>
+                <option value="Personal Development">Personal Development</option>
+                <option value="General Knowledge">General Knowledge</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" class="form-control" placeholder="Share your inquiry or requirements..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Inquiry</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-cta-card">
+        <div>
+          <h3>Start Your Learning Journey</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">Reach out today to explore educational possibilities.</p>
+        </div>
+        <a href="#contact" class="btn btn-primary">Contact Knowledge Hub</a>
+      </div>
+
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="logo">
+            <span class="logo-main">KNOWLEDGE</span>
+            <span class="logo-sub">HUB</span>
+          </a>
+          <p>“Learn More. Know More. Become More.”</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>QUICK LINKS</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#learning">Learning</a></li>
+            <li><a href="#subjects">Subjects</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>LEARNING AREAS</h4>
+          <ul class="footer-links">
+            <li><a href="#learning">English & Communication</a></li>
+            <li><a href="#learning">Computer & Technology</a></li>
+            <li><a href="#learning">Academic Learning</a></li>
+            <li><a href="#learning">Professional Skills</a></li>
+            <li><a href="#learning">Personal Development</a></li>
+            <li><a href="#learning">General Knowledge</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>CONTACT</h4>
+          <ul class="footer-links">
+            <li>Karachi, Pakistan</li>
+            <li>Phone: <a href="tel:+923092749383" style="color: var(--text-light);">03092749383</a></li>
+            <li>WhatsApp: <a href="https://wa.me/923092749383" target="_blank" style="color: var(--text-light);">+92 309 2749383</a></li>
+            <li>Email: <a href="mailto:info@knowledgehub.com" style="color: var(--text-light);">info@knowledgehub.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; <span id="currentYear"></span> Knowledge Hub. All rights reserved.</div>
+        <div class="footer-legal">
+          <a href="#home">Privacy Policy</a>
+          <a href="#home">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP BUTTON -->
+  <div class="back-to-top" id="backToTop" aria-label="Back to top">&#8593;</div>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Set Current Year Dynamically
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+      // Navbar Scroll & Section Active State
+      const navbar = document.getElementById('navbar');
+      const backToTop = document.getElementById('backToTop');
+      const navLinks = document.querySelectorAll('.nav-links a');
+      const sections = document.querySelectorAll('section');
+
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+          backToTop.classList.add('show');
+        } else {
+          navbar.classList.remove('scrolled');
+          backToTop.classList.remove('show');
+        }
+
+        let current = '';
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop - 140;
+          if (pageYOffset >= sectionTop) {
+            current = section.getAttribute('id');
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active');
+          }
+        });
+      });
+
+      // Hamburger Mobile Menu
+      const hamburger = document.getElementById('hamburger');
+      const navLinksMenu = document.getElementById('navLinks');
+
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinksMenu.classList.toggle('active');
+      });
+
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('active');
+          navLinksMenu.classList.remove('active');
+        });
+      });
+
+      // Scroll Reveal Animation
+      const reveals = document.querySelectorAll('.reveal');
+      const revealOnScroll = () => {
+        const windowHeight = window.innerHeight;
+        reveals.forEach(el => {
+          const elementTop = el.getBoundingClientRect().top;
+          if (elementTop < windowHeight - 80) {
+            el.classList.add('active');
+          }
+        });
+      };
+      window.addEventListener('scroll', revealOnScroll);
+      revealOnScroll();
+
+      // Interactive Learning Focus Selector
+      const focusBtns = document.querySelectorAll('.focus-btn');
+      const focusImg = document.getElementById('focusImg');
+      const focusTitle = document.getElementById('focusTitle');
+      const focusDesc = document.getElementById('focusDesc');
+
+      focusBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          focusBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          focusImg.style.opacity = '0.3';
+          setTimeout(() => {
+            focusImg.src = btn.getAttribute('data-img');
+            focusTitle.textContent = btn.getAttribute('data-title');
+            focusDesc.textContent = btn.getAttribute('data-desc');
+            focusImg.style.opacity = '1';
+          }, 200);
+        });
+      });
+
+      // Knowledge Categories Filtering
+      const filterBtns = document.querySelectorAll('.filter-btn[data-filter]');
+      const knowledgeCards = document.querySelectorAll('.knowledge-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const filter = btn.getAttribute('data-filter');
+
+          knowledgeCards.forEach(card => {
+            const cat = card.getAttribute('data-category');
+            if (filter === 'all' || cat === filter) {
+              card.style.display = 'flex';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      // Gallery Filtering
+      const gfilterBtns = document.querySelectorAll('.filter-btn[data-gfilter]');
+      const galleryItems = document.querySelectorAll('.gallery-item');
+
+      gfilterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          gfilterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const gfilter = btn.getAttribute('data-gfilter');
+
+          galleryItems.forEach(item => {
+            const gcat = item.getAttribute('data-gcategory');
+            if (gfilter === 'all' || gcat === gfilter) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      // Gallery Lightbox
+      const lightbox = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lbImg');
+      const lbClose = document.getElementById('lbClose');
+      const lbPrev = document.getElementById('lbPrev');
+      const lbNext = document.getElementById('lbNext');
+
+      let currentGIndex = 0;
+
+      const openLb = (idx) => {
+        currentGIndex = idx;
+        lbImg.src = galleryItems[currentGIndex].querySelector('img').src;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      };
+
+      const closeLb = () => {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      };
+
+      galleryItems.forEach((item, idx) => {
+        item.addEventListener('click', () => openLb(idx));
+      });
+
+      lbClose.addEventListener('click', closeLb);
+      lbPrev.addEventListener('click', () => {
+        currentGIndex = (currentGIndex - 1 + galleryItems.length) % galleryItems.length;
+        openLb(currentGIndex);
+      });
+      lbNext.addEventListener('click', () => {
+        currentGIndex = (currentGIndex + 1) % galleryItems.length;
+        openLb(currentGIndex);
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (!lightbox.classList.contains('active')) return;
+        if (e.key === 'Escape') closeLb();
+        if (e.key === 'ArrowLeft') lbPrev.click();
+        if (e.key === 'ArrowRight') lbNext.click();
+      });
+
+      // FAQ Accordion
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+          const isOpen = item.classList.contains('active');
+          faqItems.forEach(i => i.classList.remove('active'));
+          if (!isOpen) item.classList.add('active');
+        });
+      });
+
+      // Interactive Quiz System
+      const quizQuestions = [
+        {
+          question: "What is the primary benefit of active recall in learning?",
+          options: ["Strengthens memory retention", "Increases reading speed", "Reduces sleep requirements", "Eliminates note-taking"],
+          answer: 0
+        },
+        {
+          question: "Which skill involves structuring thoughts clearly and articulating ideas effectively?",
+          options: ["Data analysis", "Communication", "Hardware maintenance", "Graphic rendering"],
+          answer: 1
+        },
+        {
+          question: "What approach encourages breaking complex problems into smaller, manageable parts?",
+          options: ["Analytical Thinking", "Rote Learning", "Passive Listening", "Random Guessing"],
+          answer: 0
+        },
+        {
+          question: "What does digital literacy primarily encompass?",
+          options: ["Hardware repair only", "Understanding and using technology effectively", "Pure computer programming", "Physical paper filing"],
+          answer: 1
+        },
+        {
+          question: "Which learning habit involves regularly re-visiting previous concepts?",
+          options: ["Spaced Repetition", "Cramming", "Multitasking", "Subvocalization"],
+          answer: 0
+        }
+      ];
+
+      let currentQuizIdx = 0;
+      let score = 0;
+      let selectedOpt = null;
+
+      const quizCurrentNum = document.getElementById('quizCurrentNum');
+      const quizProgressFill = document.getElementById('quizProgressFill');
+      const quizQuestionText = document.getElementById('quizQuestionText');
+      const quizOptions = document.getElementById('quizOptions');
+      const quizNextBtn = document.getElementById('quizNextBtn');
+      const quizActive = document.getElementById('quizActive');
+      const quizResults = document.getElementById('quizResults');
+      const finalScore = document.getElementById('finalScore');
+      const quizRestartBtn = document.getElementById('quizRestartBtn');
+
+      const loadQuizQuestion = () => {
+        selectedOpt = null;
+        quizNextBtn.disabled = true;
+        const q = quizQuestions[currentQuizIdx];
+
+        quizCurrentNum.textContent = currentQuizIdx + 1;
+        quizProgressFill.style.width = `${((currentQuizIdx + 1) / quizQuestions.length) * 100}%`;
+        quizQuestionText.textContent = q.question;
+        quizOptions.innerHTML = '';
+
+        q.options.forEach((optText, i) => {
+          const btn = document.createElement('button');
+          btn.className = 'quiz-opt';
+          btn.textContent = `${String.fromCharCode(65 + i)}. ${optText}`;
+          btn.addEventListener('click', () => {
+            const allOpts = quizOptions.querySelectorAll('.quiz-opt');
+            allOpts.forEach(o => o.classList.remove('selected'));
+            btn.classList.add('selected');
+            selectedOpt = i;
+            quizNextBtn.disabled = false;
+          });
+          quizOptions.appendChild(btn);
+        });
+      };
+
+      quizNextBtn.addEventListener('click', () => {
+        if (selectedOpt === null) return;
+        const q = quizQuestions[currentQuizIdx];
+        const allOpts = quizOptions.querySelectorAll('.quiz-opt');
+
+        if (selectedOpt === q.answer) {
+          score++;
+          allOpts[selectedOpt].classList.add('correct');
+        } else {
+          allOpts[selectedOpt].classList.add('wrong');
+          allOpts[q.answer].classList.add('correct');
+        }
+
+        setTimeout(() => {
+          currentQuizIdx++;
+          if (currentQuizIdx < quizQuestions.length) {
+            loadQuizQuestion();
+          } else {
+            quizActive.style.display = 'none';
+            quizResults.style.display = 'block';
+            finalScore.textContent = score;
+          }
+        }, 1000);
+      });
+
+      quizRestartBtn.addEventListener('click', () => {
+        currentQuizIdx = 0;
+        score = 0;
+        quizResults.style.display = 'none';
+        quizActive.style.display = 'block';
+        loadQuizQuestion();
+      });
+
+      loadQuizQuestion();
+
+      // Contact Form Validation
+      const form = document.getElementById('inquiryForm');
+      const formAlert = document.getElementById('formAlert');
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        formAlert.className = 'form-alert success';
+        formAlert.textContent = 'Thank you for contacting Knowledge Hub! Your inquiry details have been captured on screen.';
+        form.reset();
+      });
+
+      // Back to top scroll
+      backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>
